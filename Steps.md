@@ -12,3 +12,5 @@ Create basic project structure
 create test base for signup, login and view profile
 
 create controller, routes and auth to pass the created test.
+
+now add github actions workflows for unit testing, use .env.save to as .env (for github actions)

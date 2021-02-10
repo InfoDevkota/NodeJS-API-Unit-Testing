@@ -5,6 +5,14 @@ const cors = require('cors');
 require('dotenv').config({path: __dirname + '/.env'});
 // console.log(process.env['DATABASE_NAME']);
 
+if(process.env['DATABASE_NAME']){
+    console.log("using .env")
+} else {
+    require('dotenv').config({path: __dirname + '/.env.save'});
+    console.log("using .env.save");
+    console.log(process.env['DATABASE_NAME']);
+}
+
 const APIRouter = require('./routes/api/routes');
 
 let app = express();
